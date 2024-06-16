@@ -1,0 +1,6 @@
+FROM node:17 as build
+COPY package*.json .
+RUN npm start
+COPY . .
+EXPOSE 8080
+cmd ["node","server"]
